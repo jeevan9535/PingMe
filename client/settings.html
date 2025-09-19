@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PingMe - Settings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-navbar">
+    <h1 class="navbar-title">PingMe</h1>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="profile.html">👤 Profile</a></li>
+        <li><a href="main.html">🏠 Main</a></li>
+        <li><a href="saved.html">📄 Saved Notes</a></li>
+        <li><a href="categories.html">📂 Categories</a></li>
+        <li><a href="help.html">❓ Help</a></li>
+        <li><a href="settings.html" class="active">⚙ Settings</a></li>
+        <li><button class="logout-btn-sidebar" onclick="window.location.href='login.html'">Logout</button></li>
+      </ul>
+    </aside>
+
+    <main class="settings-content">
+      <h2>⚙️ Settings</h2>
+
+      <div class="settings-list">
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" checked />
+            📧 Enable Email Notifications
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" />
+            🔔 Enable Push Reminders
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" />
+            🌙 Dark Mode (Coming Soon)
+          </label>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

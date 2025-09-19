@@ -1,0 +1,539 @@
+/* #GLOBAL CSS# */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #fffdf5;
+  color: #333;
+  overflow: hidden;
+}
+
+button {
+  background: #ffb700;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #e6a300;
+}
+
+button:active {
+  background: #cc8a00;
+  box-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
+}
+
+/* #INDEX PAGE */
+.landing-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: linear-gradient(135deg, #fff8b3, #ffffff);
+  overflow: hidden;
+}
+
+.landing-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+}
+
+.landing-logo {
+  width: 180px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-container h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.highlight {
+  color: #c79500;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-buttons .btn {
+  background: #ffb700;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 160px;
+  text-align: center;
+}
+
+.auth-buttons .btn:hover {
+  background: #e6a300;
+  box-shadow: 0 0 15px rgba(255, 183, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* #SIGNUP + LOGIN PAGE */
+.signup-login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.auth-card {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  max-width: 90%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 160px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.auth-card h2,
+.auth-card h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.auth-card button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.auth-card p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.auth-card p a {
+  color: #c79500;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-card p a:hover {
+  text-decoration: underline;
+}
+
+/* #DASHBOARD PAGES */
+
+/* Top navbar */
+.top-navbar {
+  background: #ffb300;
+  color: black;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 6px 0;
+  line-height: 1.2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Dashboard layout */
+.dashboard-container {
+  display: flex;
+  height: calc(100vh - 32px);
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #ffec99;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* since logout is now part of menu */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  height: calc(100vh - 32px);
+  box-sizing: border-box;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+/* Sidebar links */
+.sidebar ul li a {
+  display: block;
+  padding: 10px;
+  background: #ffe680;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #ffcc00;
+}
+
+/* ✅ Logout button styled like a menu item but red-ish for emphasis */
+.logout-btn-sidebar {
+  width: 100%;
+  padding: 10px;
+  background: #ff6666; /* red logout */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn-sidebar:hover {
+  background: #e05555;
+}
+
+/* Main content grid (default pages) */
+.main-content {
+  flex: 1;
+  background: #fffdf5;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  overflow-y: auto;
+}
+
+.note-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.note-card:hover {
+  background: #fff3d1;
+  transform: translateY(-3px);
+}
+
+.add-note {
+  border: 2px dashed #ffb700;
+  background: #fffaf0;
+  color: #ff9900;
+}
+
+/* Help & settings common content */
+.help-content,
+.settings-content {
+  flex: 1;
+  padding: 30px;
+  background: #fffdf0;
+  min-height: calc(100vh - 60px);
+}
+
+.help-content h2,
+.settings-content h2 {
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+/* FAQ cards */
+.faq-card {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  line-height: 1.5;
+}
+
+.faq-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #ff9900;
+}
+
+.faq-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Saved notes layout overrides */
+#notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;        /* ensure full width */
+  max-width: 1000px;  /* optional: limit wide stretch */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.note-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: orange;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.note-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff9900;
+  margin-bottom: 8px;
+}
+
+.note-card .remarks {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  max-height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 6px;
+}
+
+/* Saved notes modal */
+.note-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.note-modal .modal-content {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #ff9900;
+}
+
+.modal-content p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+  text-align: left;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.delete-btn {
+  margin-top: 15px;
+  padding: 10px 16px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    box-shadow: none;
+  }
+  .main-content {
+    justify-content: center;
+  }
+}
+
+/* Add Note Modal */
+.add-note-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.add-note-card {
+  background: #fff3cd;
+  border-radius: 15px;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.add-note-card h2 {
+  margin-bottom: 15px;
+  color: #ff8800;
+}
+
+.add-note-card input,
+.add-note-card textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.add-note-card input[type="file"] {
+  padding: 5px;
+}
+
+.add-note-card label {
+  font-weight: bold;
+  color: #444;
+  display: block;
+  margin-top: 12px;
+}
+
+.note-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.note-modal-buttons button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note-modal-buttons button:hover {
+  background-color: #ff8800;
+}
+

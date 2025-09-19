@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PingMe - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-navbar">
+    <h1 class="navbar-title">PingMe</h1>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="profile.html">👤 Profile</a></li>
+        <li><a href="main.html" class="active">🏠 Main</a></li>
+        <li><a href="saved.html">📄 Saved Notes</a></li>
+        <li><a href="categories.html">📂 Categories</a></li>
+        <li><a href="help.html">❓ Help</a></li>
+        <li><a href="settings.html">⚙ Settings</a></li>
+        <li><button class="logout-btn-sidebar" onclick="logout()">Logout</button></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="note-card add-note" onclick="openModal()">+ Add Note</div>
+      <div class="note-card">Shopping List</div>
+      <div class="note-card">Meeting Notes</div>
+      <div class="note-card">Birthday Reminder</div>
+      <div class="note-card">Another Note</div>
+    </main>
+  </div>
+
+  <!-- Add Note Modal -->
+  <div id="noteModal" class="add-note-modal">
+    <div class="add-note-card">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Add New Note</h2>
+
+      <input type="text" id="noteTitleInput" placeholder="Title" />
+      <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+
+      <label for="reminderDate">Reminder Date</label>
+      <input type="date" id="reminderDate" />
+
+      <label for="reminderTime">Reminder Time</label>
+      <input type="time" id="reminderTime" />
+
+      <label for="ringtone">Ringtone</label>
+      <input type="file" id="ringtone" />
+
+      <div class="note-modal-buttons">
+        <button onclick="clearNote()">Clear</button>
+        <button onclick="saveNote()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

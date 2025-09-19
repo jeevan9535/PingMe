@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PingMe - Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="top-navbar">
+    <h1 class="navbar-title">PingMe</h1>
+  </header>
+
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="profile.html" class="active">👤 Profile</a></li>
+        <li><a href="main.html">🏠 Main</a></li>
+        <li><a href="saved.html">📄 Saved Notes</a></li>
+        <li><a href="categories.html">📂 Categories</a></li>
+        <li><a href="help.html">❓ Help</a></li>
+        <li><a href="settings.html">⚙ Settings</a></li>
+        <li><button class="logout-btn-sidebar" onclick="logout()">Logout</button></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="profile-card">
+        <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+        <h2 id="name">Loading...</h2>
+        <p class="email" id="email">Loading...</p>
+        <hr>
+        <div class="profile-details">
+          <p><strong>Username:</strong> <span id="username">-</span></p>
+          <p><strong>Joined:</strong> <span id="createdAt">-</span></p>
+          <p><strong>Total Notes:</strong> <span id="totalNotes">-</span></p>
+        </div>
+        <button>Edit Profile</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="profile.js"></script>
+
+  <script>
+    function logout() {
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
