@@ -45,11 +45,11 @@ npm start
 
 ### Front Page
 
-![Front Page](./assets/frontpage.png)
+![Front Page](./client/assets/frontpage.png)
 
 ### Folder Structure
 
-![Folder Structure](./assets/folderstructure.png)
+![Folder Structure](./client/assets/folderstructure.png)
 
 ---
 
